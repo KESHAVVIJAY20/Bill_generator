@@ -1,10 +1,15 @@
 import React from "react";
 import Logo from "../assets/v.gif";
-import { Datepicker, TextInput } from "flowbite-react";
+import { Datepicker, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
+import { FaCoins } from "react-icons/fa"; // for gold
+import { GiSilverBullet } from "react-icons/gi"; // for silver
+
 export default function Header() {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [goldRate, setGoldRate] = useState("");
+  const [silverRate, setSilverRate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +44,9 @@ export default function Header() {
       </div>
       <div className=" self-center whitespace-nowrap text-5xl sm:text-xl flex items-center">
         <img src={Logo} className="md:w-[200px] w-[150px]" alt="logo" />
-        <p className="md:text-5xl uppercase font-light font-serif self-center text-[#ffe5bd] text-xl">VIJAY JEWELLERS</p>
+        <p className="md:text-5xl uppercase font-light font-serif self-center text-[#ffe5bd] text-xl">
+          VIJAY JEWELLERS
+        </p>
       </div>
       <div className="flex justify-end items-center">
         <address className="md:text-3xl text-xl bg-gray-300 rounded max-w-[500px] p-2 underline">
@@ -60,6 +67,46 @@ export default function Header() {
         <p>Date:</p>
         <Datepicker />
       </div>
+
+      {/* Gold and Silver Inputs */}
+      <div className="flex flex-col md:flex-row gap-6 justify-end mb-5">
+        {/* Gold Rate */}
+        <div className="flex flex-col">
+          <label
+            htmlFor="goldRate"
+            className="text-gray-700 font-semibold mb-1 md:text-xl text-base"
+          >
+            Gold Rate (₹)
+          </label>
+          <input
+            id="goldRate"
+            type="number"
+            placeholder="Enter Gold Rate"
+            value={goldRate}
+            onChange={(e) => setGoldRate(e.target.value)}
+            className="bg-[#ffe5bd] rounded-xl"
+          />
+        </div>
+
+        {/* Silver Rate */}
+        <div className="flex flex-col">
+          <label
+            htmlFor="silverRate"
+            className="text-gray-700 font-semibold mb-1 md:text-xl text-base"
+          >
+            Silver Rate (₹)
+          </label>
+          <input
+            id="silverRate"
+            type="number"
+            placeholder="Enter Silver Rate"
+            value={silverRate}
+            onChange={(e) => setSilverRate(e.target.value)}
+            className="rounded-xl"
+          />
+        </div>
+      </div>
+
       {!submitted ? (
         <form
           onSubmit={handleSubmit}
@@ -85,7 +132,7 @@ export default function Header() {
       ) : (
         <div className="text-start flex items-center">
           <p className="font-semibold">Mr/Mrs.</p>
-          <h2 className="md:text-6xl text-3xl font-bold text-gray-800">
+          <h2 className="md:text-6xl text-3xl font-bold text-pink-800">
             {name.toUpperCase()}
           </h2>
         </div>
