@@ -20,9 +20,9 @@ export default function Header() {
   return (
     <div className="">
       <div className="flex justify-between">
-        <p>Gold/Silver</p>
-        <p className="text-3xl">|| श्री गणेशाय नमः ||</p>
-        <p className="flex gap-2">
+        <p className="md:text-2xl text-sm">Gold/Silver</p>
+        <p className="md:text-3xl text-sm">|| श्री गणेशाय नमः ||</p>
+        <p className="flex md:gap-2 md:text-2xl text-sm">
           <span>Mobile No.</span>{" "}
           <span>
             94626-32598 <br /> 80055-64070
@@ -37,17 +37,17 @@ export default function Header() {
           🖨️ Print
         </button>
       </div>
-      <div className="flex justify-center items-center">
-        <img src={Logo} className="w-[200px]" alt="logo" />
-        <p className="text-8xl text-[#ffe5bd]">VIJAY JEWELLERS</p>
+      <div className=" self-center whitespace-nowrap text-5xl sm:text-xl flex items-center">
+        <img src={Logo} className="md:w-[200px] w-[150px]" alt="logo" />
+        <p className="md:text-5xl uppercase font-light font-serif self-center text-[#ffe5bd] text-xl">VIJAY JEWELLERS</p>
       </div>
       <div className="flex justify-end items-center">
-        <address className="text-3xl bg-gray-300 rounded max-w-[500px] p-2 underline">
+        <address className="md:text-3xl text-xl bg-gray-300 rounded max-w-[500px] p-2 underline">
           68, विश्वकर्मा नगर स्पेशल , कोटा (राज.)
         </address>
       </div>
 
-      <div className="flex justify-between text-2xl mt-10">
+      <div className="flex md:justify-between md:text-2xl text-xl mt-10">
         <p>सोने व चांदी के पुनः निर्माणकर्ता</p>
         <p>(राशियों के रत्न भी उपलब्ध है)</p>
       </div>
@@ -85,7 +85,7 @@ export default function Header() {
       ) : (
         <div className="text-start flex items-center">
           <p className="font-semibold">Mr/Mrs.</p>
-          <h2 className="text-6xl font-bold text-gray-800">
+          <h2 className="md:text-6xl text-3xl font-bold text-gray-800">
             {name.toUpperCase()}
           </h2>
         </div>

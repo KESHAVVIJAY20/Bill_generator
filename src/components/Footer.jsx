@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="mt-10">
     {/* <div className="flex justify-end items-center me-28 absolute"><p className="relative">M/S Vijay Jewellers</p>
     <img src={SealStamp} className="relative" alt="" /></div> */}
-    <div className="absolute right-28 flex flex-col items-center">
+    <div className="absolute md:right-28 right-10 flex flex-col items-center">
   <div className="relative">
     <p className="text-sm font-semibold">M/S Vijay Jewellers</p>
     <img
