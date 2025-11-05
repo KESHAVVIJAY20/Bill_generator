@@ -50,7 +50,7 @@ export default function Header() {
       </div>
       <div className="flex justify-end items-center">
         <address className="md:text-3xl text-xl bg-gray-300 rounded max-w-[500px] p-2 underline">
-          68, विश्वकर्मा नगर स्पेशल , कोटा (राज.)
+          62, विश्वकर्मा नगर स्पेशल , कोटा (राज.)
         </address>
       </div>
 
